@@ -1,4 +1,5 @@
 FROM python:3.8.1-slim-buster
+ENV test 1
 
 COPY . /app
 
