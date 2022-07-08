@@ -1,5 +1,5 @@
 FROM python:3.8.1-slim-buster
-ENV test 2
+ENV test 3
 
 COPY . /app
 
