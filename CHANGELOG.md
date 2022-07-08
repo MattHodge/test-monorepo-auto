@@ -1,3 +1,23 @@
+# v0.2.0 (Fri Jul 08 2022)
+
+#### 🚀 Enhancement
+
+- Test 1 [#4](https://github.com/MattHodge/test-monorepo-auto/pull/4) ([@MattHodge](https://github.com/MattHodge))
+
+#### 🐛 Bug Fix
+
+- Test 2 [#5](https://github.com/MattHodge/test-monorepo-auto/pull/5) ([@MattHodge](https://github.com/MattHodge))
+
+#### ⚠️ Pushed to `main`
+
+- Only rls with label ([@MattHodge](https://github.com/MattHodge))
+
+#### Authors: 1
+
+- Matthew Hodgkins ([@MattHodge](https://github.com/MattHodge))
+
+---
+
 # v0.1.1 (Fri Jul 08 2022)
 
 #### 🐛 Bug Fix
