@@ -6,5 +6,5 @@
   "repo": "test-monorepo-auto",
   "name": "AutoBot",
   "email": "autobot@autobot.com",
-  "onlyPublishWithReleaseLabel": false
+  "onlyPublishWithReleaseLabel": true
 }
