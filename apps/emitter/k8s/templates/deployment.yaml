@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $.Release.Name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ $.Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ $.Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ $.Release.Name }}
+    spec:
+      containers:
+      - name: {{ $.Release.Name }}
+        image: localhost:5000/emitter:local
+        command:
+          - start.sh
+          - "python"
+          - "/app/main.py"
+        env:
+        - name: PYTHONUNBUFFERED
+          value: "1"

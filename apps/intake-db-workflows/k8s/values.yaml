@@ -1,0 +1,3 @@
+development:
+  mysql_database_user: root
+  mysql_database_password: testing
