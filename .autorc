@@ -1,10 +1,10 @@
 {
   "plugins": [
-    "git-tag"
+    "git-tag", "released"
   ],
   "owner": "MattHodge",
   "repo": "test-monorepo-auto",
   "name": "AutoBot",
   "email": "autobot@autobot.com",
-  "onlyPublishWithReleaseLabel": true
+  "onlyPublishWithReleaseLabel": false
 }
