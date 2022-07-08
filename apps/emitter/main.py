@@ -4,7 +4,7 @@ import json
 
 # cluster
 host = "intake"
-port = 9999
+port = 9998
 
 url = "http://{}:{}".format(host, port)
 print("Emitter starting and sending metrics to: {}\n".format(url))
