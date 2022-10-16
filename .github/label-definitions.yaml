@@ -1,3 +1,7 @@
+- name: "skip-changelog"
+  color: "FFD966"
+  description: "Skips enforcing a changelog is present"
+
 - name: "emitter"
   color: "D73A4A"
   description: "Changes to the emitter"

@@ -1,3 +1,6 @@
+skip-changelog:
+- any: ['*/**/*', '!apps/**/*'] # Adds this label to everything except app changes
+
 emitter:
 - apps/emitter/**/*
 
