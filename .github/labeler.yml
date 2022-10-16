@@ -1,0 +1,5 @@
+emitter:
+- apps/emitter/**/*
+
+intake:
+- apps/intake/**/*

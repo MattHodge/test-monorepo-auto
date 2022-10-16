@@ -1,0 +1,31 @@
+- name: "emitter"
+  color: "D73A4A"
+  description: "Changes to the emitter"
+
+- name: "@emitter/minor"
+  color: "D73A4A"
+  description: "Changes to the emitter"
+
+- name: "@emitter/major"
+  color: "D73A4A"
+  description: "Changes to the emitter"
+
+- name: "@emitter/patch"
+  color: "D73A4A"
+  description: "Changes to the emitter"
+
+- name: "intake"
+  color: "FF1493"
+  description: "High urgency label"
+
+- name: "@intake/minor"
+  color: "FF1493"
+  description: "High urgency label"
+
+- name: "@intake/major"
+  color: "FF1493"
+  description: "High urgency label"
+
+- name: "@intake/patch"
+  color: "FF1493"
+  description: "High urgency label"
