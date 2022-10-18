@@ -1,0 +1,50 @@
+---
+name: Apps
+on:
+  push:
+    branches: [ main ] # your default branch if different
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    # Required permissions
+    permissions:
+      pull-requests: read
+    # Set job outputs to values from filter step
+    outputs:
+      emitter: ${{ steps.filter.outputs.emitter }}
+      intake: ${{ steps.filter.outputs.intake }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            emitter:
+              - 'apps/emitter/**'
+            intake:
+              - 'apps/intake/**'
+
+  emitter:
+    needs: changes
+    if: ${{ needs.changes.outputs.emitter == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update source code
+        run: |
+          changed_filename=$(ls -t apps/emitter/.changes | head -1)
+          full_changed_path=$(realpath apps/emitter/.changes/$changed_filename)
+          echo "Updating CHANGELOG.md"
+          scripts/change_to_template.sh emitter $changed_filename
+          echo "Updating VERSION"
+          scripts/bump_version.sh emitter $changed_filename
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Auto Bumper
+          author_email: auto@bumper.com
+          message: 'Your commit message'
+          add: '["apps/emitter/VERSION", "apps/emitter/CHANGELOG.md"]'
+          remove: $changed_filename

@@ -1,21 +1,21 @@
-name: Check Changelog Entry
+# name: Check Changelog Entry
 
-on:
-  pull_request:
-    types: [opened, reopened, labeled, unlabeled, synchronize]
-  workflow_dispatch:
+# on:
+#   pull_request:
+#     types: [opened, reopened, labeled, unlabeled, synchronize]
+#   workflow_dispatch:
 
-defaults:
-  run:
-    shell: bash
+# defaults:
+#   run:
+#     shell: bash
 
-permissions:
-  contents: read
-  pull-requests: write
+# permissions:
+#   contents: read
+#   pull-requests: write
 
-jobs:
-  changelog:
-    uses: dbt-labs/actions/.github/workflows/changelog-existence.yml@main
-    with:
-      changelog_comment: 'No changelog has been added.'
-      skip_label: 'skip-changelog'
+# jobs:
+#   changelog:
+#     uses: dbt-labs/actions/.github/workflows/changelog-existence.yml@main
+#     with:
+#       changelog_comment: 'No changelog has been added.'
+#       skip_label: 'skip-changelog'

@@ -1,0 +1,13 @@
+---
+app: emitter
+bump: major
+changes:
+  added:
+    - new method to do blah
+    - |
+      a cool way to do json:
+        ```json
+        {"a": "b"}
+        ```
+  changed:
+    - foo
