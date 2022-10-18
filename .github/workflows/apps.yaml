@@ -32,6 +32,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+      - run: go install github.com/bluebrown/go-template-cli/cmd/tpl@latest
+      - run: go install github.com/maykonlf/semver-cli/cmd/semver@latest
       - name: Update source code
         run: |
           changed_filename=$(ls -t apps/emitter/.changes | head -1)
