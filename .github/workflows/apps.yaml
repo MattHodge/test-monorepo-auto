@@ -33,6 +33,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v3
+        with:
+          go-version: '>=1.18.0'
       - run: go install github.com/bluebrown/go-template-cli/cmd/tpl@latest
       - run: go install github.com/maykonlf/semver-cli/cmd/semver@latest
       - name: Update source code
