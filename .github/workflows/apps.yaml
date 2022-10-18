@@ -50,6 +50,6 @@ jobs:
         with:
           author_name: Auto Bumper
           author_email: auto@bumper.com
-          message: 'Your commit message'
+          message: 'Bump Emitter Version [skip ci]'
           add: '["apps/emitter/VERSION", "apps/emitter/CHANGELOG.md", "apps/emitter/.semver.yaml"]'
-          remove: ${full_changed_path}
+          remove: "apps/emitter/.changes/*.yaml"
