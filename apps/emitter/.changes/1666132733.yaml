@@ -1,8 +1,0 @@
----
-app: emitter
-bump: minor
-changes:
-  - added: CHANGE ME
-  - changed: CHANGE ME
-    details:
-      - something else

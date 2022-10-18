@@ -16,8 +16,12 @@ cat > $filename << EOF
 app: ${app_name}
 bump: $2
 changes:
-  - added: CHANGE ME
-  - changed: CHANGE ME
-    details:
-      - something else
+  added:
+    - CHANGE ME
+  changed:
+    - CHANGE ME
+    - |
+      Multi
+      Line
+      Stuff
 EOF

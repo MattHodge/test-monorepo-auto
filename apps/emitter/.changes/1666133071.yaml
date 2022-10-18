@@ -1,0 +1,12 @@
+---
+app: emitter
+bump: minor
+changes:
+  added:
+    - CHANGE ME
+  changed:
+    - CHANGE ME
+    - |
+      Multi
+      Line
+      Stuff
