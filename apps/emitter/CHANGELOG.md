@@ -1,13 +1,9 @@
 # Changelog
 ## Added
-- new method to do blah
-- a cool way to do json:
-  ```json
-  {"a": "b"}
-  ```
-
+- CHANGE ME
 ## Changed
-- foo
-- foo2
-- foo3
-- foo4
+- CHANGE ME
+- Multi
+Line
+Stuff
+
