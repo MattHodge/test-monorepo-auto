@@ -42,14 +42,14 @@ jobs:
           changed_filename=$(ls -t apps/emitter/.changes | head -1)
           full_changed_path=$(realpath apps/emitter/.changes/$changed_filename)
           echo "Updating CHANGELOG.md"
-          scripts/change_to_template.sh emitter $changed_filename
+          scripts/change_to_template.sh emitter $full_changed_path
           echo "Updating VERSION"
-          scripts/bump_version.sh emitter $changed_filename
+          scripts/bump_version.sh emitter $full_changed_path
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
           author_name: Auto Bumper
           author_email: auto@bumper.com
           message: 'Your commit message'
-          add: '["apps/emitter/VERSION", "apps/emitter/CHANGELOG.md"]'
-          remove: $changed_filename
+          add: '["apps/emitter/VERSION", "apps/emitter/CHANGELOG.md", "apps/emitter/.emver.yaml"]'
+          remove: $full_changed_path
